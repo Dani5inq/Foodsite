@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+
+    <title>FoodOSO</title>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-main">
+        <div class="nav-header">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="logo"
+          />
+          <i class="fa-solid fa-magnifying-glass" id="search-option"></i>
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+
+        <ul class="menu">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#menu">Menu</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="noshow">
+            <a href="#Gallery">Gallery</a>
+          </li>
+          <li class="noshow">
+            <a href="#review">Review</a>
+          </li>
+          <li class="noshow">
+            <a href="#order-form">Order</a>
+          </li>
+        </ul>
+        <div class="nav-icons">
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-magnifying-glass" id="mag"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <img
+        src="https://images.unsplash.com/photo-1516684465974-78661ba8165d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+        alt="food"
+      />
+      <div class="banner-text">
+        <h1>Get Fresh <span>Food</span> The Easy Way</h1>
+        <button id="reserve">RESERVATION</button>
+        <button id="order">ORDER</button>
+      </div>
+    </div>
+
+    <section id="about" class="about">
+      <div class="about-img">
+        <img
+          src="https://images.unsplash.com/photo-1564836235910-c3055ca0f912?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGFzaWFuJTIwZm9vZHN8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=700&q=60"
+          alt="food"
+        />
+      </div>
+      <div class="about-content">
+        <h1><span>About</span> Us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo vel vitae
+          ex consectetur possimus provident nostrum doloribus veniam quas magnam
+          facilis enim iure numquam suscipit consequuntur, libero, atque velit
+          nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo vel
+          vitae ex consectetur possimus provident nostrum doloribus veniam quas
+          magnam facilis enim iure numquam suscipit consequuntur, libero, atque
+          velit nam.
+        </p>
+        <button>Learn More</button>
+      </div>
+    </section>
+    <section class="carousel-section" id="menu">
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img">
+              <img
+                src="https://images.unsplash.com/photo-1628294896516-344152572ee8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGFzaWFuJTIwZm9vZHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                alt="food"
+                draggable="false"
+              />
+              <div class="img-content">
+                <h3>Dumplin Okairi</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptate a, possimus velit laborum ipsum quasi quisquam
+                  eveniet reprehenderit impedit ad.
+                </p>
+                <h3>£40</h3>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <button>Order Now</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVhdCUyMGZvb2R8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60"
+                alt="food"
+                draggable="false"
+              />
+              <div class="img-content">
+                <h3>Dargon Meat</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptate a, possimus velit laborum ipsum quasi quisquam
+                  eveniet reprehenderit impedit ad.
+                </p>
+                <h3>£35.50</h3>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <button>Order Now</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="https://images.unsplash.com/photo-1503764654157-72d979d9af2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNoaW5lc2UlMjBmb29kfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="food"
+                draggable="false"
+              />
+              <div class="img-content">
+                <h3>Noodle Soup</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptate a, possimus velit laborum ipsum quasi quisquam
+                  eveniet reprehenderit impedit ad.
+                </p>
+                <h3>£200</h3>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <button>Order Now</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="https://images.unsplash.com/photo-1529690678884-189e81f34ef6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGNoaW5lc2UlMjBmb29kfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="food"
+                draggable="false"
+              />
+              <div class="img-content">
+                <h3>Hong Kong Beef</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptate a, possimus velit laborum ipsum quasi quisquam
+                  eveniet reprehenderit impedit ad.
+                </p>
+                <h3>£80</h3>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <button>Order Now</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="https://images.unsplash.com/photo-1614277786110-1a64e457c4c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaW5lc2UlMjBmb29kfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="food"
+                draggable="false"
+              />
+              <div class="img-content">
+                <h3>Lemon Duck</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptate a, possimus velit laborum ipsum quasi quisquam
+                  eveniet reprehenderit impedit ad.
+                </p>
+                <h3>£60</h3>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <button>Order Now</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                alt="food"
+                draggable="false"
+              />
+              <div class="img-content">
+                <h3>Eforiro & fufu</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptate a, possimus velit laborum ipsum quasi quisquam
+                  eveniet reprehenderit impedit ad.
+                </p>
+                <h3>£50</h3>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <button>Order Now</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </section>
+
+    <section id="Gallery">
+      <div class="Gallery-text">
+        <h1>Our <span>Gallery</span></h1>
+      </div>
+      <div class="Gallery">
+        <div class="Gallery-images">
+          <img
+            src="https://images.unsplash.com/photo-1580822650092-21e074d73dcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+            alt="dessert"
+          />
+        </div>
+
+        <div class="Gallery-images">
+          <img
+            src="https://images.unsplash.com/photo-1559715745-e1b33a271c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGRlc3NlcnR8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=700&q=60"
+            alt="dessert"
+          />
+        </div>
+
+        <div class="Gallery-images">
+          <img
+            src="https://images.unsplash.com/photo-1492683513054-55277abccd99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="dessert"
+          />
+        </div>
+
+        <div class="Gallery-images">
+          <img
+            src="https://images.unsplash.com/photo-1543573852-1a71a6ce19bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="dessert"
+          />
+        </div>
+
+        <div class="Gallery-images">
+          <img
+            src="https://images.unsplash.com/photo-1469533778471-92a68acc3633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80"
+            alt="dessert"
+          />
+        </div>
+
+        <div class="Gallery-images">
+          <img
+            src="https://images.unsplash.com/photo-1580822664294-f9462d112359?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="dessert"
+          />
+        </div>
+      </div>
+    </section>
+    <h1 class="customer-review">Customer <span>Review</span></h1>
+    <section id="review">
+      <div class="review">
+        <div class="review-content">
+          <img
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+            alt="user image"
+          />
+          <h4>Petorov Busquet</h4>
+          <div class="ratings">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <p class="text">
+            Overall, FOOD OSO is a gem of a restaurant. The combination of
+            exceptional service, delectable food, and cozy atmosphere make it a
+            top-notch dining experience. Whether you're a fan of Asian cuisine
+            or looking to explore new flavors, this place is a must-visit. Trust
+            me, you won't be disappointed!" The balance of sweet, sour, and
+            savory flavors, combined with the perfect harmony
+          </p>
+        </div>
+      </div>
+
+      <div class="review">
+        <div class="review-content">
+          <img
+            src="https://images.unsplash.com/photo-1626387133160-02364bcac6ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxvbmRlfGVufDB8fDB8fHww&auto=format&fit=crop&w=700&q=60"
+            alt="user image"
+          />
+          <h4>Tiffany Lopez</h4>
+          <div class="ratings">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text">
+            I would kill for their Eforiro & fufu, oh my goodness! I would
+            seriously kill for that dish! The combination of rich, flavorful
+            Eforiro sauce and the soft, fluffy fufu is a match made in food
+            heaven. Every bite is an explosion of African flavors that make my
+            taste buds dance with joy. It's the kind of dish that leaves you
+            craving more even after you've devoured every last morsel.
+          </p>
+        </div>
+      </div>
+
+      <div class="review">
+        <div class="review-content">
+          <img
+            src="https://images.unsplash.com/photo-1567131308523-383d0fea9671?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxvbmRlfGVufDB8fDB8fHww&auto=format&fit=crop&w=700&q=60"
+            alt="user image"
+          />
+          <h4>Charlotte Richards</h4>
+          <div class="ratings">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <p class="text">
+            As a British woman with a love for exploring different cultures,
+            stumbling upon this restaurant was a delightful surprise. The moment
+            you step into Food Oso, you're greeted with a warm and inviting
+            atmosphere. The decor is tastefully done, blending traditional Asian
+            elements with a modern touch.As for the food, well really amazing
+            but dont try to kill me with spice!!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="order">
+      <div class="order-box-image">
+        <h1><span>Order</span> Now</h1>
+        <img
+          src="https://images.unsplash.com/photo-1534476391-1ae99699617b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+          alt="food"
+        />
+      </div>
+
+      <div class="form" id="order-form">
+        <div class="input-box">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="input-box">
+          <label for="number">Number</label>
+          <input type="text" id="number" required />
+        </div>
+        <div class="input-box order-box">
+          <label for="order">Your order</label>
+          <select id="order">
+            <option value="option1">Menu</option>
+            <option value="option2">Dumplin Okairi £40</option>
+            <option value="option3">Noodle Soup £200</option>
+            <option value="option1">Dargon Meat £35</option>
+            <option value="option2">Lemon Duck £60</option>
+            <option value="option3">Eforiro & fufu £50</option>
+            <option value="option3">Hong Kong Beef £80</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <label for="email">Email</label>
+          <input type="text" id="email" required />
+        </div>
+        <div class="input-box">
+          <label for="address">Address</label>
+          <input type="text" id="address" required />
+        </div>
+
+        <div class="inputBox">
+          <button class="button" type="submit">Order</button>
+        </div>
+      </div>
+      <h1>Our <span>Team</span></h1>
+      <div class="team">
+        <div class="team-images">
+          <img
+            src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNoZWZ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60"
+            alt="dessert"
+          />
+          <h4 class="team-images-text">@Chef Nagato ishigami</h4>
+        </div>
+
+        <div class="team-images">
+          <img
+            src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+            alt="dessert"
+          />
+          <h4 class="team-images-text">@Chef Hohoemu hisigami</h4>
+        </div>
+
+        <div class="team-images">
+          <img
+            src="https://images.unsplash.com/photo-1620641606872-f9641b65adab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+            alt="dessert"
+          />
+          <h4 class="team-images-text">@Chef Atsui Otoko</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="location">
+        <h5><a href="https://goo.gl/maps/SBMaPjN5tKveWVu9A">London</a></h5>
+        <h5><a href="https://goo.gl/maps/KA5qsKZz4QNeK2ns8">Manchester</a></h5>
+        <h5><a href="https://goo.gl/maps/sA27r1scCWhLJfdD6">Paris</a></h5>
+        <h5><a href="https://goo.gl/maps/VyZTfFDMkhKNkGth8">Tokyo</a></h5>
+        <h5><a href="https://goo.gl/maps/aKPGq3HoAJPv2jBW9">Madrid</a></h5>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#Gallery">Gallery</a>
+        <a href="#review">Review</a>
+        <a href="#order-form">Order</a>
+      </div>
+      <div class="phone">
+        <h5>+73 53 5734 097</h5>
+        <h5>+73 53 5734 097</h5>
+        <h5>+73 53 5734 097</h5>
+      </div>
+      <div class="service">
+        <h5>Full-Service Restaurants</h5>
+        <h5>Fast-Food 0utlets</h5>
+        <h5>Cateres</h5>
+        <h5>24/7</h5>
+      </div>
+    </section>
+
+    <footer>
+      <p class="footer">
+        <a href="https://dani5inq.github.io/Port/port.html"
+          >Dani5inq <span id="hat">&#10084;</span></a
+        >
+      </p>
+
+      <p class="footer">
+        <a href="https://www.linkedin.com/in/sophia-oliseh-a7311527a/"
+          >Sophia Oliseh(UI & UX)
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
