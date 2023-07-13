@@ -827,12 +827,17 @@ footer a:hover {
     position: relative;
     background-color: white;
     border-bottom: 1px solid red;
-    height: 5%;
+  
+  }
+
+    .nav-main {
+    height: 70px;
   }
 
   .nav-header img {
     height: 70px;
-    margin-top: 20px;
+    margin-top: 0;
+    margin-bottom: 1px;
   }
 
   .Gallery .Gallery-images {
